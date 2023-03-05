@@ -1,41 +1,28 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using MoodAnalyzer;
+
 public class Program
 {
-   
-
-        public static void Main(string[] args)
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the Mood : ");
+        string x = Console.ReadLine();
+        try
         {
-            Program.ErrorFun();
+            MoodAnalyser m1 = new MoodAnalyser();
+            m1.MoodException(x);
         }
-
-        public static void ErrorFun()
+        catch (Exception ex)
         {
-
-            Console.WriteLine("Enter the Mood Happy or Sad: ");
-            string mood = Console.ReadLine();
-            try
-            {
-                if (mood == "Happy")
-                {
-                    Console.WriteLine("Happy");
-                }
-                if (mood == "Sad")
-                {
-                    Console.WriteLine("Sad");
-                }
-                else
-                {
-                    throw new Exception();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
+            Console.WriteLine(ex.Message);
         }
     }
+}
 
 
-       
-    
+
+
+
+
+
 
