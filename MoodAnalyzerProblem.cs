@@ -9,6 +9,7 @@ namespace MoodAnalyzer
 
     public class MoodAnalyser
     {
+
         string mood;
         public void MoodException(string mood)
         {
