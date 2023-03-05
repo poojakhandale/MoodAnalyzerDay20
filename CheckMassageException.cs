@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyzer
 {
-    public class CheckMassageException : Exception
+
+    public class CheckMessageException : Exception
     {
-        public CheckMassageException(string message) : base(message)
+        public CheckMessageException(string message) : base(message)
         {
 
-            
-            
         }
     }
 }
