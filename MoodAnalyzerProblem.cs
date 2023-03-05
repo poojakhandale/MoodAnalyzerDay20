@@ -6,20 +6,30 @@ using System.Threading.Tasks;
 
 namespace MoodAnalyzer
 {
+
     public class MoodAnalyser
     {
-        public string n;
-        public MoodAnalyser(string name)
+        string mood;
+        public void MoodException(string mood)
         {
-            this.n = name;
-            Console.WriteLine(n);
+            if (mood == null || mood == "")
+            {
+                Console.WriteLine("Invalid Mood");
+                // throw new Exception("Invalid Mood Found Exception");
+            }
+            else if (mood == "Happy" || mood == "happy")
+            {
+                Console.WriteLine("Happy Mood");
+            }
+            else if (mood == "Sad" || mood == "sad")
+            {
+                Console.WriteLine("Sad Mood");
+            }
+            else
+            {
+                Console.WriteLine("The mood is " + mood);
+            }
         }
-
-        public string mood()
-        {
-            return this.n;
-        }
-
     }
-    }
+}
 
